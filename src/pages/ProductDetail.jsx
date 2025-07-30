@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import data from "../Data/data";
+import data from "../Data/homeData";
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -64,7 +64,7 @@ const ProductDetail = () => {
               <img
                 src={img}
                 alt={title}
-                className=" animate-scale-infinite w-full h-full object-contain max-w-sm hover:scale-105 transition-transform duration-500 "
+                className=" animate-scale-infinite w-full h-full object-contain max-w-sm transition-transform duration-500 "
               />
             </div>
 
@@ -72,7 +72,7 @@ const ProductDetail = () => {
             <div className="absolute top-6 left-6 bg-white rounded-full px-4 py-2 shadow-lg flex items-center gap-2">
               <div
                 className={`w-4 h-4 rounded-full border-2 border-white shadow-md ${
-                  // this component using ternay and Card using obj instead
+                  // this component using ternary and Card using obj instead
                   color === "Black"
                     ? "bg-black"
                     : color === "White"

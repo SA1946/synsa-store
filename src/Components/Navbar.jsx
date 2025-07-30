@@ -16,8 +16,8 @@ const links = [
     path: "accessories",
   },
   {
-    label: "About",
-    path: "about",
+    label: "Contact us",
+    path: "contactUs",
   },
 ];
 
@@ -56,7 +56,7 @@ const Navbar = () => {
 
 function NavBar({ atTop, isOpen, setIsOpen }) {
   return (
-    <div className="flex flex-col w-full px-6 md:px-10 mx-auto md:items-center md:justify-start md:flex-row">
+    <div className="flex flex-col w-full px-6 md:px-9 mx-auto md:items-center md:justify-start md:flex-row">
       <div className="flex items-center justify-between">
         <Link to="/">
           <img className="h-[65px] w-auto" src={logo} alt="logo" />
@@ -95,7 +95,7 @@ function NavBar({ atTop, isOpen, setIsOpen }) {
             : "max-h-0 opacity-0 md:max-h-none md:opacity-100 md:flex"
         }`}
       >
-        <ul className="flex text-center flex-col md:flex-row gap-3 md:gap-10 rounded-none">
+        <ul className="flex text-center flex-col md:flex-row gap-3 md:gap-8  rounded-none">
           {links.map((link, index) => {
             return (
               <li
@@ -106,7 +106,7 @@ function NavBar({ atTop, isOpen, setIsOpen }) {
                     ? "translate-y-0 opacity-100"
                     : "translate-y-4 opacity-0 md:translate-y-0 md:opacity-100"
                 } hover:scale-105 hover:text-blue-300 transition-colors duration-75`}
-                key={link.label}
+                key={index}
                 style={{
                   transitionDelay: isOpen ? `100ms` : "0ms",
                 }}

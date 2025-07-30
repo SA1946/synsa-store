@@ -153,7 +153,7 @@ const Footer = () => {
 
             {/* Social Links */}
             <div className="flex space-x-4">
-              {socialLinks.map(({name , pathname , icon}) => (
+              {socialLinks.map(({ name, pathname, icon }) => (
                 <a
                   key={name}
                   href={pathname}
@@ -176,7 +176,7 @@ const Footer = () => {
                   <li key={link.label}>
                     <Link
                       to={link.path}
-                      className="text-gray-300 hover:text-blue-400 transition-colors duration-300 hover:translate-x-1 transform inline-block"
+                      className="text-gray-300 hover:text-blue-400 transition-colors duration-300 hover:translate-x-1 inline-block"
                     >
                       {link.label}
                     </Link>
