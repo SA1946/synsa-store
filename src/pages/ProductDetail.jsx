@@ -1,10 +1,27 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams, NavLink } from "react-router-dom";
 import data from "../Data/homeData";
 
 const ProductDetail = () => {
   const { id } = useParams();
 
-  const product = data.find((p) => p.id == id);
+  const product = data.find((p) => p.id.toString() === id);
+  console.log("URL id:", id, "Data:", data);
+
+  if (!product) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            Product not found
+          </h2>
+          <NavLink to="/" className="text-blue-600 hover:text-blue-800">
+            Back to Home
+          </NavLink>
+        </div>
+      </div>
+    );
+  }
+
   const {
     title,
     img,
@@ -18,26 +35,11 @@ const ProductDetail = () => {
     price,
   } = product;
 
-  // if (!product) {
-  //   return (
-  //     <div className="min-h-screen flex items-center justify-center">
-  //       <div className="text-center">
-  //         <h2 className="text-2xl font-bold text-gray-900 mb-4">
-  //           Product not found
-  //         </h2>
-  //         <Link to="/" className="text-blue-600 hover:text-blue-800">
-  //           Back to Home
-  //         </Link>
-  //       </div>
-  //     </div>
-  //   );
-  // }
-
   return (
     <section className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 pt-24 pb-12">
       <div className="max-w-7xl mx-auto px-6">
         {/* Back btn */}
-        <Link
+        <NavLink
           to="/"
           className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-8 transition-colors duration-300"
         >
@@ -55,7 +57,7 @@ const ProductDetail = () => {
             />
           </svg>
           Back to Products
-        </Link>
+        </NavLink>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/*  Image */}

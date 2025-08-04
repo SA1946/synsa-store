@@ -17,7 +17,7 @@ import oppoA60Blue from "../assets/images/Oppo A60-Blue.png";
 import oppoA60Midnight from "../assets/images/Oppo A60-Midnight.png";
 
 // Create the data array
- const data = [
+const data = [
   {
     id: 1,
     title: "iPhone 16 Pro Max Black",
@@ -29,7 +29,7 @@ import oppoA60Midnight from "../assets/images/Oppo A60-Midnight.png";
     chipset: "Apple A18 Pro",
     ram: "8GB",
     battery: "4500mAh",
-    price: "$1299"
+    price: "$1299",
   },
   {
     id: 2,
@@ -42,7 +42,7 @@ import oppoA60Midnight from "../assets/images/Oppo A60-Midnight.png";
     chipset: "Apple A18 Pro",
     ram: "8GB",
     battery: "4500mAh",
-    price: "$1299"
+    price: "$1299",
   },
   {
     id: 3,
@@ -55,7 +55,7 @@ import oppoA60Midnight from "../assets/images/Oppo A60-Midnight.png";
     chipset: "Apple A18 Pro",
     ram: "8GB",
     battery: "4500mAh",
-    price: "$1299"
+    price: "$1299",
   },
   {
     id: 4,
@@ -68,7 +68,7 @@ import oppoA60Midnight from "../assets/images/Oppo A60-Midnight.png";
     chipset: "Apple A18",
     ram: "8GB",
     battery: "4300mAh",
-    price: "$1199"
+    price: "$1199",
   },
   {
     id: 5,
@@ -81,7 +81,7 @@ import oppoA60Midnight from "../assets/images/Oppo A60-Midnight.png";
     chipset: "Apple A18",
     ram: "8GB",
     battery: "4300mAh",
-    price: "$1199"
+    price: "$1199",
   },
   {
     id: 6,
@@ -94,7 +94,7 @@ import oppoA60Midnight from "../assets/images/Oppo A60-Midnight.png";
     chipset: "Apple A17",
     ram: "6GB",
     battery: "3500mAh",
-    price: "$799"
+    price: "$799",
   },
   {
     id: 7,
@@ -107,7 +107,7 @@ import oppoA60Midnight from "../assets/images/Oppo A60-Midnight.png";
     chipset: "Apple A17",
     ram: "6GB",
     battery: "3500mAh",
-    price: "$799"
+    price: "$799",
   },
   {
     id: 8,
@@ -120,7 +120,7 @@ import oppoA60Midnight from "../assets/images/Oppo A60-Midnight.png";
     chipset: "Apple M3 Max",
     ram: "32GB",
     battery: "100Wh",
-    price: "$3499"
+    price: "$3499",
   },
   {
     id: 9,
@@ -133,7 +133,7 @@ import oppoA60Midnight from "../assets/images/Oppo A60-Midnight.png";
     chipset: "AMD Ryzen 9",
     ram: "32GB",
     battery: "90Wh",
-    price: "$1599"
+    price: "$1599",
   },
   {
     id: 10,
@@ -146,7 +146,7 @@ import oppoA60Midnight from "../assets/images/Oppo A60-Midnight.png";
     chipset: "Intel i7-13620H",
     ram: "16GB",
     battery: "53Wh",
-    price: "$1399"
+    price: "$1399",
   },
   {
     id: 11,
@@ -159,7 +159,7 @@ import oppoA60Midnight from "../assets/images/Oppo A60-Midnight.png";
     chipset: "Mediatek Helio G85",
     ram: "6GB",
     battery: "5000mAh",
-    price: "$149"
+    price: "$149",
   },
   {
     id: 12,
@@ -172,7 +172,7 @@ import oppoA60Midnight from "../assets/images/Oppo A60-Midnight.png";
     chipset: "Mediatek Helio G85",
     ram: "6GB",
     battery: "5000mAh",
-    price: "$149"
+    price: "$149",
   },
   {
     id: 13,
@@ -185,7 +185,7 @@ import oppoA60Midnight from "../assets/images/Oppo A60-Midnight.png";
     chipset: "Snapdragon 680",
     ram: "8GB",
     battery: "5000mAh",
-    price: "$179"
+    price: "$179",
   },
   {
     id: 14,
@@ -198,7 +198,7 @@ import oppoA60Midnight from "../assets/images/Oppo A60-Midnight.png";
     chipset: "Snapdragon 680",
     ram: "8GB",
     battery: "5000mAh",
-    price: "$179"
+    price: "$179",
   },
   {
     id: 15,
@@ -211,7 +211,7 @@ import oppoA60Midnight from "../assets/images/Oppo A60-Midnight.png";
     chipset: "Snapdragon 680",
     ram: "8GB",
     battery: "5000mAh",
-    price: "$169"
+    price: "$169",
   },
   {
     id: 16,
@@ -224,7 +224,7 @@ import oppoA60Midnight from "../assets/images/Oppo A60-Midnight.png";
     chipset: "Snapdragon 680",
     ram: "8GB",
     battery: "5000mAh",
-    price: "$169"
-  }
+    price: "$169",
+  },
 ];
-export default data
+export default data;

@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { services, features, faqs } from "../Data/serviceData";
-console.log(services);
-console.log(features);
 
 // Key Feature *method one*
 const Feature = ({ feature }) => {

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/logo2.png";
 import { useState, useEffect } from "react";
 
@@ -9,15 +9,15 @@ const links = [
   },
   {
     label: "Service",
-    path: "service",
+    path: "/service",
   },
   {
     label: "Accessories",
-    path: "accessories",
+    path: "/accessories",
   },
   {
     label: "Contact us",
-    path: "contactUs",
+    path: "/contactUs",
   },
 ];
 
@@ -111,13 +111,13 @@ function NavBar({ atTop, isOpen, setIsOpen }) {
                   transitionDelay: isOpen ? `100ms` : "0ms",
                 }}
               >
-                <Link
+                <NavLink
                   to={link.path}
                   onClick={() => setIsOpen(false)}
                   className="block py-3 px-6 md:py-2 md:px-4 rounded-xl md:rounded-md hover:bg-white hover:bg-opacity-10 transition-all duration-200 font-medium"
                 >
                   {link.label}
-                </Link>
+                </NavLink>
               </li>
             );
           })}
