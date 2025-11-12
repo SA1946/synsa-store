@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/logo2.png";
 import { useState, useEffect } from "react";
+import DayNightToggle from "./DayNightToggle";
 
 const links = [
   {
@@ -24,9 +25,11 @@ const links = [
 const Navbar = () => {
   const [atTop, setAtTop] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
+  const [isDark, setIsDark] = useState(true);
 
   useEffect(() => {
     const onScroll = () => setAtTop(window.pageYOffset <= 50);
+    onScroll();
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -34,21 +37,28 @@ const Navbar = () => {
   return (
     <div className="relative">
       <div
-        className={`fixed z-50 w-full transition-all duration-700 ease-in-out inset-x-0 mx-auto ${
-          // Desktop style
+        className={` fixed  top-10 z-50 w-full transition-all duration-700 ease-in-out inset-x-0 mx-auto ${
           atTop
-            ? "max-w-2xl bg-transparent "
-            : " lg:max-w-4xl max-w-3xl bg-[#435C7C]/70  bg-opacity-90 backdrop-blur-xl md:rounded-2xl md:mt-4 "
-        }${
-          // Mobile phone style
+            ? "max-w-2xl bg-transparent"
+            : "lg:max-w-4xl max-w-3xl -top-2 bg-[#435C7C]/70 bg-opacity-90 backdrop-blur-xl md:rounded-2xl md:mt-4"
+        } ${
           isOpen
             ? "max-w-[95%] rounded-xl bg-opacity-95 backdrop-blur-xl shadow-2xl border border-white/20"
             : ""
-        }
-      
-      `}
+        }`}
       >
         <NavBar atTop={atTop} isOpen={isOpen} setIsOpen={setIsOpen} />
+      </div>
+
+      <div
+        className={` fixed  top-10 z-50 py-4 right-20 transition-all duration-700 ease-in-out ${
+          atTop ? "" : "-top-2 md:mt-4"
+        } ${isOpen ? "max-w-[95%]" : ""}`}
+      >
+        <DayNightToggle
+          checked={isDark}
+          onChange={(e) => setIsDark(e.target.checked)}
+        />
       </div>
     </div>
   );

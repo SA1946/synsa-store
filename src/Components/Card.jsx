@@ -70,7 +70,7 @@ const Card = ({ products }) => {
 
                 <Link
                   to={`products/${id}`}
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium transition-all duration-300 hover:scale-105 active:scale-95 shadow-md hover:shadow-lg"
+                  className="bg-blue-600  hover:bg-blue-700 text-white px-6 py-2 rounded-full font-medium transition-all duration-300 hover:scale-105 active:scale-95 shadow-md hover:shadow-lg"
                 >
                   Details
                 </Link>

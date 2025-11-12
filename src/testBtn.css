@@ -1,0 +1,175 @@
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 32px;
+}
+
+.toggle-switch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  background: linear-gradient(to right, #1e293b, #0f172a);
+  border: 2px solid #334155;
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.sun-moon {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 22px;
+  height: 22px;
+  background: #cbd5e1;
+  border: 2px solid #94a3b8;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+
+.stars1,
+.stars2 {
+  position: absolute;
+  height: 2px;
+  width: 2px;
+  background: white;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.stars1::before,
+.stars1::after,
+.stars2::before,
+.stars2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 1.5px;
+  width: 1.5px;
+  background: white;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.stars1 {
+  top: 6px;
+  right: 18px;
+}
+
+.stars1::after {
+  top: 6px;
+  right: 14px;
+}
+
+.stars1::before {
+  top: 12px;
+  right: -8px;
+}
+
+.stars2 {
+  top: 18px;
+  right: 28px;
+}
+
+.stars2::after {
+  top: -4px;
+  right: -10px;
+}
+
+.stars2::before {
+  top: 4px;
+  right: -16px;
+}
+
+.sun-moon .dots {
+  position: absolute;
+  top: 2px;
+  left: 10px;
+  height: 8px;
+  width: 8px;
+  background: #e2e8f0;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 50%;
+  transition: all 0.4s ease;
+}
+
+.sun-moon .dots::before,
+.sun-moon .dots::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 3px;
+  width: 3px;
+  background: #e2e8f0;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 50%;
+  transition: all 0.4s ease;
+}
+
+.sun-moon .dots::after {
+  top: -2px;
+  left: -16px;
+}
+
+.sun-moon .dots::before {
+  top: 10px;
+  left: -6px;
+}
+
+/* Checked state: Sun */
+#toggle:checked ~ .sun-moon {
+  left: calc(100% - 26px);
+  background: #fbbf24;
+  border-color: #f59e0b;
+  transform: rotate(-25deg);
+}
+
+#toggle:checked ~ .sun-moon .dots {
+  height: 12px;
+  width: 12px;
+  top: -2px;
+  left: -12px;
+  transform: rotate(25deg);
+  background: white;
+  border-color: white;
+}
+
+#toggle:checked ~ .sun-moon .dots::after {
+  height: 4px;
+  width: 4px;
+  top: 1px;
+  left: -8px;
+}
+
+#toggle:checked ~ .sun-moon .dots::before {
+  height: 3px;
+  width: 3px;
+  top: 3px;
+  left: 8px;
+}
+
+#toggle:checked ~ .background .stars1,
+#toggle:checked ~ .background .stars2 {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+#toggle:checked ~ .background {
+  border-color: #22d3ee;
+  background: linear-gradient(to right, #06b6d4, #67e8f9);
+}

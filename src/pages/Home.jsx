@@ -5,6 +5,7 @@ const Home = () => {
   return (
     <section className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100">
       {/* Hero */}
+      
       <div className="pt-24 pb-12 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">

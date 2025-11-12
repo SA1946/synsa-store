@@ -44,11 +44,18 @@ const FaqItem = ({ question, answer }) => {
         className="w-full flex justify-between items-center text-left transition-all ease-out duration-200"
       >
         <h4 className="text-lg font-semibold text-gray-800">{question}</h4>
-        {isOpen ? (
+        {/* {isOpen ? (
           <ChevronUp className="h-6 w-6 text-blue-600" />
         ) : (
           <ChevronDown className="h-6 w-6 text-gray-500" />
-        )}
+        )} */}
+        {/*-------------Another way-----------------*/}
+        <ChevronUp
+          className={`
+        h-6 w-6  transition-all ease-out duration-200
+        ${isOpen ? "rotate-180 text-blue-600 " : " text-gray-600"}
+          `}
+        />
       </button>
       <div
         className={`transition-all duration-300 ease-in-out ${

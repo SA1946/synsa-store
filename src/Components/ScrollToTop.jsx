@@ -14,7 +14,7 @@ const ScrollToTop = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
+  
   //when route change
   useEffect(() => {
     console.log(location);
