@@ -2,9 +2,9 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div className=" lg:py-1 bg-gradient-to-r from-blue-200 to-purple-300 ">
-      <div className=" max-w-screen-xl   flex  lg:justify-end   ">
-        <span className="flex text-center">
+    <div className="dark:bg-gradient-to-r dark:from-blue-200 dark:to-purple-300 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-950 ">
+      <div className=" max-w-screen-xl  flex lg:justify-end ">
+        <span className="flex text-center text-gray-100 dark:text-gray-900">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="18"

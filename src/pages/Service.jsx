@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import {  ChevronUp } from "lucide-react";
 import { services, features, faqs } from "../Data/serviceData";
 
 // Key Feature *method one*
@@ -71,13 +71,23 @@ const FaqItem = ({ question, answer }) => {
 // Main Service Page Component
 const Service = () => {
   return (
-    <div className="bg-gray-50 font-sans">
+    // <div
+    //   className={` min-h-screen ${
+    //     isDark
+    //       ? " bg-gradient-to-br from-gray-50 via-white to-gray-100"
+    //       : "bg-gradient-to-br from-blue-950 via-slate-950 to-gray-900 text-white  "
+    //   }`}
+    // >
+    <div className="dark:bg-gradient-to-br dark:from-gray-50 dark:via-white dark:to-gray-100 bg-gradient-to-br from-blue-950 via-slate-950 to-gray-900 text-white">
       {/* Main container with padding */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
         {/* --- Hero Section --- */}
         <section className="text-center mb-20">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight">
-            Your Tech, <span className="text-blue-600">Our Expertise.</span>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold dark:text-gray-900 text-gray-400 leading-tight">
+            Your Tech,{" "}
+            <span className="dark:text-blue-600 text-gray-200">
+              Our Expertise.
+            </span>
           </h1>
           <p className="mt-6 max-w-2xl mx-auto text-lg text-gray-600">
             From cracked screens to battery woes, we provide professional,
@@ -99,10 +109,10 @@ const Service = () => {
         {/* --- Services Grid Section --- */}
         <section className="mb-24">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
+            <h2 className="text-3xl sm:text-4xl font-bold dark:text-gray-900 text-gray-300">
               Our Core Services
             </h2>
-            <p className="mt-4 text-gray-600 max-w-xl mx-auto">
+            <p className="mt-4 dark:text-gray-600 text-gray-400 max-w-xl mx-auto">
               We handle a wide range of issues with precision and care.
             </p>
           </div>
@@ -116,10 +126,10 @@ const Service = () => {
         {/* --- FAQ Section --- */}
         <section className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
+            <h2 className="text-3xl sm:text-4xl font-bold dark:text-gray-900 text-gray-300 ">
               Have Questions?
             </h2>
-            <p className="mt-4 text-gray-600">
+            <p className="mt-4 dark:text-gray-600 text-gray-400">
               Find answers to common queries about our services below.
             </p>
           </div>

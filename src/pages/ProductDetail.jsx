@@ -36,12 +36,12 @@ const ProductDetail = () => {
   } = product;
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 pt-24 pb-12">
+    <section className=" pt-10 pb-5 dark:bg-gradient-to-br dark:from-gray-50 dark:via-white dark:to-gray-100 bg-gradient-to-br from-blue-950 via-slate-950 to-gray-900 ">
       <div className="max-w-7xl mx-auto px-6">
         {/* Back btn */}
         <NavLink
           to="/"
-          className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-8 transition-colors duration-300"
+          className="inline-flex items-center dark:text-gray-600 text-gray-200 hover:text-gray-100 hover:dark:text-gray-900 mb-8 transition-colors duration-300"
         >
           <svg
             className="w-5 h-5 mr-2"
@@ -102,14 +102,16 @@ const ProductDetail = () => {
           <div className="space-y-8">
             {/* Title and Price */}
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              <h1 className="text-4xl md:text-5xl font-bold dark:text-gray-900 mb-4  text-gray-200">
                 {title}
               </h1>
               <div className="flex items-baseline gap-4">
-                <span className="text-4xl font-bold text-gray-900">
+                <span className="text-4xl font-bold dark:text-gray-900 text-gray-200  ">
                   {price}
                 </span>
-                <span className="text-lg text-gray-500">Starting price</span>
+                <span className="text-lg dark:text-gray-500 text-gray-300 ">
+                  Starting price
+                </span>
               </div>
             </div>
 
@@ -177,7 +179,7 @@ const ProductDetail = () => {
             </div>
 
             {/* Why chhose this */}
-            <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-3xl p-8">
+            <div className="bg-gradient-to-r   from-blue-50 to-purple-50 rounded-3xl p-8">
               <h3 className="text-xl font-bold text-gray-900 mb-4">
                 Why Choose This?
               </h3>

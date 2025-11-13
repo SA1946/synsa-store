@@ -6,21 +6,26 @@ import {
 } from "react-router-dom";
 import RootLayout from "./Layout/RootLayout";
 import { Home, ProductDetail, Service } from "./pages";
-
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route path="/" element={<RootLayout />}>
-      <Route index element={<Home />} />
-      <Route path="products/:id" element={<ProductDetail />} />
-      <Route path="service" element={<Service />} />
-      <Route path="accessories" element={<h1>Accessories Page</h1>} />
-      <Route path="contactUs" element={<h1>Contact Us</h1>} />
-      <Route path="*" element={<h1>404 Not Found</h1>} />
-    </Route>
-  )
-);
+import { useState } from "react";
 
 function App() {
+  const [isDark, setIsDark] = useState(true);
+
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route
+        path="/"
+        element={<RootLayout isDark={isDark} setIsDark={setIsDark} />}
+      >
+        <Route index element={<Home />} />
+        <Route path="products/:id" element={<ProductDetail />} />
+        <Route path="service" element={<Service />} />
+        <Route path="accessories" element={<h1>Accessories Page</h1>} />
+        <Route path="contactUs" element={<h1>Contact Us</h1>} />
+        <Route path="*" element={<h1>404 Not Found</h1>} />
+      </Route>
+    )
+  );
   return <RouterProvider router={router}></RouterProvider>;
 }
 
